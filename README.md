@@ -8,4 +8,8 @@
 
 <h2> Informações Importantes ⚠️ </h2>
 
-<p> Todos os dados utilizados neste projetos são fictícios, nenhum e-mail ou número de telefone são reais. </p>
+<p> Todos os dados utilizados neste projetos são fictícios, nenhum e-mail ou número de telefone são reais. Os dados utilizados foram extraídos de uma banco de dados que apenas eu tenho acesso. Para utilizá-lo, tu podes um banco de dados com as tabelas "nome", "email", "idade" e "telefone" e criar seus próprios dados.</p>
+
+<h2> Melhorias Futuras 🔧 </h2>
+
+<p> Continuarei a trabalhar neste projeto para solucionar os possíveis bugs e adicionar mais funcionalidades em breve. Caso deseje colaborar comigo, fique à vontade para entrar em contato comigo! </p>
