@@ -4,12 +4,8 @@
 
 <h2> Como utilizar? 🖥️ </h2>
 
-<p> Primeiramente, é preciso que tenhas a última versão do Google Chrome instalada. Após isso, é necessário baixar a versão compatível ao seu PC do ChromeDriver para controlar o navegador através do Selenium (https://sites.google.com/chromium.org/driver/) e por fim instalar suas dependências. Feito este processo, clone o repositório e o execute em seu PC. </p>
+<p> É recomendável possuir a última versão do Google Chrome instalada. Após isso, é necessário baixar a versão compatível ao seu navegador para que o Selenium possa automatizar seu navegador e, por fim, instalar a biblioteca. Feito este processo, clone o repositório e o execute em seu computador. </p>
 
 <h2> Informações Importantes ⚠️ </h2>
 
-<p> Todos os dados utilizados neste projetos são fictícios, nenhum e-mail ou número de telefone são reais. Os dados utilizados foram extraídos de uma banco de dados que apenas eu tenho acesso. Para utilizá-lo, tu podes um banco de dados com as tabelas "nome", "email", "idade" e "telefone" e criar seus próprios dados.</p>
-
-<h2> Melhorias Futuras 🔧 </h2>
-
-<p> Continuarei a trabalhar neste projeto para solucionar os possíveis bugs e adicionar mais funcionalidades em breve. Caso deseje colaborar comigo, fique à vontade para entrar em contato comigo! </p>
+<p> Todos os dados utilizados neste projetos são fictícios, nenhum e-mail ou número de telefone são reais. Os dados utilizados foram extraídos do meu banco de dados pessoal .Para utilizá-lo, crie um banco de dados com as tabelas "nome", "email", "idade" e "telefone" e as preencha as suas próprias informações.</p>
