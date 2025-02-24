@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import InvalidArgumentException
+import os
 import psycopg2
 import time
 
@@ -16,7 +18,7 @@ try:
     conn = psycopg2.connect(
         dbname='postgres',
         user='postgres',
-        password='itzy',
+        password=os.getenv('DB_PASSWORD'), # Use your own password to access your database.
         host='localhost',
         port='5432'
     )
@@ -70,8 +72,11 @@ finally:
     if conn:
         conn.close()
 
-url = 'https://docs.google.com/forms/d/e/1FAIpQLSeA5zkB0F2e78PvFGaMBAjp-HFkIQ8Nw-wulrusp4sTF2IutQ/viewform'
-driver.get(url)
+try:
+    url = 'https://docs.google.com/forms/d/e/1FAIpQLSeA5zkB0F2e78PvFGaMBAjp-HFkIQ8Nw-wulrusp4sTF2IutQ/viewform'
+    driver.get(url)
+except InvalidArgumentException as error:
+    print("Couldn't search the URL. Check out if you wrote correctly the URL's page.")
 
 time.sleep(5)
 
