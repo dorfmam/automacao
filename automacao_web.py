@@ -5,7 +5,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import InvalidArgumentException
 import os
 import psycopg2
+from psycopg2 import pool
 import time
+import logging
 
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
@@ -14,11 +16,12 @@ conn = None
 
 try:
     conn = psycopg2.connect(
-        dbname='postgres',
-        user='postgres',
-        password=os.getenv('DB_PASSWORD'), # Use your own password to access your database.
-        host='localhost',
-        port='5432'
+        dbname=os.getenv('DB_NAME'),
+        user=os.getenv('DB_USER'),
+        password=os.getenv('DB_PASSWORD'),
+        host=os.getenv('DB_HOST'),
+        port=os.getenv('DB_PORT'),
+        sslmode='prefer'
     )
     
     cur = conn.cursor()
@@ -64,7 +67,8 @@ try:
     users = cur.fetchall()
 
 except psycopg2.OperationalError as error:
-    print(f'An error has occurred: {error}')
+    logging.error('Erro ao conectar ao banco de dados.')
+    raise
 
 finally:
     if conn:
@@ -74,7 +78,7 @@ try:
     url = 'https://docs.google.com/forms/d/e/1FAIpQLSeA5zkB0F2e78PvFGaMBAjp-HFkIQ8Nw-wulrusp4sTF2IutQ/viewform'
     driver.get(url)
 except InvalidArgumentException as error:
-    print("Couldn't search the URL. Check out if you wrote correctly the URL's page.")
+    print("Não foi possível acessar a página, tente verificar se você digitou corretamente a URL.")
 
 time.sleep(5)
 
