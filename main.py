@@ -75,7 +75,7 @@ finally:
         conn.close()
 
 try:
-    url = 'https://docs.google.com/forms/d/e/1FAIpQLSeA5zkB0F2e78PvFGaMBAjp-HFkIQ8Nw-wulrusp4sTF2IutQ/viewform'
+    url = 'https://dorfmam.github.io/formulario-web/'
     driver.get(url)
 except InvalidArgumentException as error:
     print("Não foi possível acessar a página, tente verificar se você digitou corretamente a URL.")
@@ -85,10 +85,10 @@ time.sleep(5)
 for user in users:
     name, email, age, phone = user
 
-    user_name = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div[2]/textarea')
-    user_email = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div[1]/input')
-    user_age = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[1]/div/div[1]/input')
-    user_phone = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/div[1]/div/div[1]/input')
+    user_name = driver.find_element(By.ID, 'nome')
+    user_email = driver.find_element(By.ID, 'email')
+    user_age = driver.find_element(By.ID, 'idade')
+    user_phone = driver.find_element(By.ID, 'telefone')
 
     user_name.send_keys(name)
     user_email.send_keys(email)
