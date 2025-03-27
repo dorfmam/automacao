@@ -4,7 +4,7 @@
 
 <h2> Como utilizar? 🖥️ </h2>
 
-<p> É recomendável possuir a última versão do Google Chrome instalada. Após isso, é necessário baixar a versão compatível ao seu navegador para que o Selenium possa automatizar seu navegador e, por fim, instalar a biblioteca e suas dependências. Feito este processo, clone o repositório com o Git e o execute em seu computador. </p>
+<p> É recomendável possuir a última versão do Google Chrome instalada. Após isso, é necessário baixar a versão compatível ao seu navegador para que o Selenium possa automatizar seu navegador e, por fim, instalar a biblioteca com <code>pip install selenium</code>. Feito este processo, clone o repositório com o <code>git clone</code> e o execute em seu computador. </p>
 
 <h2> Aviso Importante ⚠️ </h2>
 
